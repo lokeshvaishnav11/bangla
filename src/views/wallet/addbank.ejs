@@ -1,19 +1,32 @@
+
 <!DOCTYPE html>
-<html translate="no" data-dpr="1" style="font-size: 48.16px">
+<html lang="bn" data-dpr="1" style="font-size: 48.16px">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="robots" content="noindex,nofollow" />
-    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport" />
-    <title> DELHIWIN </title>
+    <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+
+    <title>টাকা উত্তোলনের তথ্য</title>
+
     <link rel="stylesheet" href="./index_files/index-96409872.css">
     <link rel="stylesheet" href="../index_files/index-96409872.css">
+
     <link href="/css/wallet/main.css" rel="stylesheet" />
     <link href="/css/wallet/chunk_2-1.css" rel="stylesheet" />
     <link href="/css/wallet/chunk_2-2.css" rel="stylesheet" />
     <link href="/css/wallet/chunk_2-3.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="/images/bitbug_favicon.ico" type="image/x-icon" />
+
+    <link
+        rel="shortcut icon"
+        href="/images/bitbug_favicon.ico"
+        type="image/x-icon"
+    />
+
     <style>
         html,
         body {
@@ -25,28 +38,28 @@
         }
 
         .mian[data-v-7aa0f84a] {
-            background-color: #fbfcfd
+            background-color: #fbfcfd;
         }
 
         .mian .bank[data-v-7aa0f84a] {
             background: #292929;
-            padding: .4rem
+            padding: .4rem;
         }
 
         .mian .bank .box[data-v-7aa0f84a] {
             background: #3f3f3f;
             color: #f3c300;
             border-radius: .26667rem;
-            padding: .4rem
+            padding: .4rem;
         }
 
         .mian .bank .box .item[data-v-7aa0f84a] {
-            margin-bottom: .26667rem
+            margin-bottom: .26667rem;
         }
 
         .mian .bank .box .item .lab[data-v-7aa0f84a] {
             font-size: .4rem;
-            margin-bottom: .26667rem
+            margin-bottom: .26667rem;
         }
 
         .mian .bank .box .item .input .ipt[data-v-7aa0f84a] {
@@ -55,296 +68,490 @@
             height: .93333rem;
             line-height: .93333rem;
             border-radius: .13333rem;
-            border: .05333rem solid #f3c300
+            border: .05333rem solid #f3c300;
         }
 
         .mian .bank .bank-btn .btn[data-v-7aa0f84a] {
             width: 50%;
-            height: 0.93333rem;
+            height: .93333rem;
             color: #8f5206;
             font-size: .4rem;
             font-weight: 700;
             letter-spacing: .01333rem;
             border: none;
             border-radius: 1.06667rem;
-            background: -webkit-linear-gradient(top, #FAE59F 0%, #C4933F 100%);
-            background: linear-gradient(180deg, #FAE59F 0%, #C4933F 100%)
+            background: linear-gradient(
+                180deg,
+                #FAE59F 0%,
+                #C4933F 100%
+            );
         }
-        .payment-methods{
-    display:flex;
-    gap:12px;
-    margin-top:10px;
-}
 
-.payment-option{
-    flex:1;
-    height:50px;
-    border:2px solid #e5e5e5;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-    background:#fff;
-    transition:.25s;
-    font-weight:600;
-    color:#333;
-}
+        .payment-methods {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
 
-.payment-option.active{
-    border-color:#ff6b2d;
-    background:#fff8f4;
-}
+        .payment-option {
+            flex: 1;
+            height: 50px;
+            border: 2px solid #e5e5e5;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #fff;
+            transition: .25s;
+            font-weight: 600;
+            color: #444;
+            position: relative;
+        }
 
-.dot{
-    width:10px;
-    height:10px;
-    border-radius:50%;
-    margin-right:10px;
-}
+        .payment-option.active {
+            border-color: #ff6b2d;
+            background: #fff4ee;
+            color: #ff6b2d;
+            box-shadow: 0 0 0 2px rgba(255,107,45,.15);
+        }
 
-.dot.jazz{
-    background:#ff2d2d;
-}
+        .payment-option.active::after {
+            content: "✓";
+            position: absolute;
+            right: 10px;
+            top: 8px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #ff6b2d;
+            color: #fff;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
 
-.dot.easy{
-    background:#7ac943;
-}
-.clo{
-    color:black
-}
-.payment-option{
-    flex:1;
-    height:50px;
-    border:2px solid #e5e5e5;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-    background:#fff;
-    transition:.25s;
-    font-weight:600;
-    color:#444;
-    position:relative;
-}
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
 
-.payment-option.active{
-    border-color:#ff6b2d;
-    background:#fff4ee;
-    color:#ff6b2d;
-    box-shadow:0 0 0 2px rgba(255,107,45,.15);
-}
+        .dot.jazz {
+            background: #e6007e;
+        }
 
-.payment-option.active::after{
-    content:"✓";
-    position:absolute;
-    right:10px;
-    top:8px;
-    width:18px;
-    height:18px;
-    border-radius:50%;
-    background:#ff6b2d;
-    color:#fff;
-    font-size:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-}
+        .dot.easy {
+            background: #ff6b00;
+        }
+
+        .clo {
+            color: black;
+        }
+
+        .payment-option .clo {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        input::placeholder {
+            color: #777;
+        }
+
+        .bank-btn {
+            margin-top: 20px;
+        }
+
+        .bank-btn .btn {
+            cursor: pointer;
+        }
+
+        .bank-btn .btn:disabled {
+            opacity: .65;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 
 <body style="font-size: 12px">
+
     <div id="app">
-        <div data-v-7aa0f84a="" class="mian">
-            
-            <div data-v-7aa0f84a="" class="bank">
-                <div data-v-7aa0f84a="" class="box">
-                    <div data-v-7aa0f84a="" class="c-row m-b-10 c-row-middle">
-                        <div data-v-7aa0f84a="" class="van-image" style="width: 40px; height: 40px">
-                            <img src="/images/pay_icon_debitcard_red.webp" class="van-image__img" />
-                        </div>
-                        <div data-v-7aa0f84a="" class="p-l-15">Withdraw Details</div>
-                    </div>
-                    <!-- <div data-v-7aa0f84a="" class="item">
-                        <div data-v-7aa0f84a="" class="lab">Bank name</div>
-                        <div data-v-7aa0f84a="" class="input">
-                            <input id="bank_name" data-v-7aa0f84a="" type="text" placeholder="Enter Your Bank Name" class="ipt" />
-                        </div>
-                    </div> -->
-                    <div class="item">
-    <div class="lab">Payment Method</div>
+        <div data-v-7aa0f84a class="mian">
 
-    <div class="payment-methods">
-        <div class="payment-option active" data-method="JazzCash">
-            <span class="dot jazz"></span>
-            <span class="clo">JazzCash</span>
-        </div>
+            <div data-v-7aa0f84a class="bank">
 
-        <div class="payment-option" data-method="EasyPaisa">
-            <span class="dot easy"></span>
-            <span class="clo">EasyPaisa</span>
-        </div>
-    </div>
+                <div data-v-7aa0f84a class="box">
 
-    <input type="hidden" id="payment_method" value="JazzCash">
-</div>
-                    <div data-v-7aa0f84a="" class="item">
-                        <div data-v-7aa0f84a="" class="lab">Your Full Name</div>
-                        <div data-v-7aa0f84a="" class="input">
-                            <input id="your_name" data-v-7aa0f84a="" type="text" placeholder="Enter Your Name"
-                                oninput="value=value.replace(/[^a-zA-Z\s+$]/g,'').toUpperCase()" class="ipt clo" />
+                    <!-- Header -->
+                    <div
+                        data-v-7aa0f84a
+                        class="c-row m-b-10 c-row-middle"
+                    >
+                        <div
+                            data-v-7aa0f84a
+                            class="van-image"
+                            style="width:40px;height:40px"
+                        >
+                            <img
+                                src="/images/pay_icon_debitcard_red.webp"
+                                class="van-image__img"
+                                alt="পেমেন্ট"
+                            />
+                        </div>
+
+                        <div
+                            data-v-7aa0f84a
+                            class="p-l-15"
+                        >
+                            টাকা উত্তোলনের বিবরণ
                         </div>
                     </div>
-                    <div data-v-7aa0f84a="" class="item">
-                        <div data-v-7aa0f84a="" class="lab"> Account number /Mobile</div>
-                        <div data-v-7aa0f84a="" class="input">
-                            <input id="account_number" data-v-7aa0f84a="" type="number" placeholder="Enter Your Bank Account Number"
-                                oninput="value=value.replace(/[^\d]/g,'')" class="ipt clo" />
+
+                    <!-- Payment Method -->
+                    <div data-v-7aa0f84a class="item">
+
+                        <div data-v-7aa0f84a class="lab">
+                            পেমেন্ট পদ্ধতি নির্বাচন করুন
                         </div>
+
+                        <div class="payment-methods">
+
+                            <div
+                                class="payment-option active"
+                                data-method="JazzCash"
+                                role="button"
+                                tabindex="0"
+                            >
+                                <span class="dot jazz"></span>
+                                <span class="clo">বিকাশ (bKash)</span>
+                            </div>
+
+                            <div
+                                class="payment-option"
+                                data-method="EasyPaisa"
+                                role="button"
+                                tabindex="0"
+                            >
+                                <span class="dot easy"></span>
+                                <span class="clo">নগদ (Nagad)</span>
+                            </div>
+
+                        </div>
+
+                        <input
+                            type="hidden"
+                            id="payment_method"
+                            value="JazzCash"
+                        />
+
                     </div>
-                    <!---->
-                    <!-- <div data-v-7aa0f84a="" class="item">
-                        <div data-v-7aa0f84a="" class="lab">IFSC Code</div>
-                        <div data-v-7aa0f84a="" class="input">
-                            <input id="ifsc_code" data-v-7aa0f84a="" type="text" placeholder="Enter Your IFSC Code" class="ipt" />
+
+                    <!-- Full Name -->
+                    <div data-v-7aa0f84a class="item">
+
+                        <div data-v-7aa0f84a class="lab">
+                            আপনার পুরো নাম
                         </div>
-                    </div> -->
-                    <div data-v-7aa0f84a="" class="item">
-                        <div data-v-7aa0f84a="" class="lab">Phone Number</div>
-                        <div data-v-7aa0f84a="" class="input">
-                            <input id="phone_number" data-v-7aa0f84a="" maxlength="10" type="mob" placeholder="It Is Required"
-                                class="ipt clo" />
+
+                        <div data-v-7aa0f84a class="input">
+                            <input
+                                id="your_name"
+                                data-v-7aa0f84a
+                                type="text"
+                                placeholder="আপনার পুরো নাম লিখুন"
+                                class="ipt clo"
+                                autocomplete="name"
+                            />
                         </div>
+
                     </div>
-                    <!---->
+
+                    <!-- Account / Mobile Number -->
+                    <div data-v-7aa0f84a class="item">
+
+                        <div data-v-7aa0f84a class="lab">
+                            বিকাশ / নগদ অ্যাকাউন্ট নম্বর
+                        </div>
+
+                        <div data-v-7aa0f84a class="input">
+                            <input
+                                id="account_number"
+                                data-v-7aa0f84a
+                                type="tel"
+                                inputmode="numeric"
+                                placeholder="আপনার অ্যাকাউন্ট নম্বর লিখুন"
+                                class="ipt clo"
+                            />
+                        </div>
+
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div data-v-7aa0f84a class="item">
+
+                        <div data-v-7aa0f84a class="lab">
+                            মোবাইল নম্বর
+                        </div>
+
+                        <div data-v-7aa0f84a class="input">
+                            <input
+                                id="phone_number"
+                                data-v-7aa0f84a
+                                type="tel"
+                                inputmode="numeric"
+                                maxlength="11"
+                                placeholder="আপনার ১১ সংখ্যার মোবাইল নম্বর লিখুন"
+                                class="ipt clo"
+                            />
+                        </div>
+
+                    </div>
+
                 </div>
-                <div data-v-7aa0f84a="" class="c-row c-row-center m-t-20 bank-btn">
-                    <button data-v-7aa0f84a=""
-                        class="btn van-button van-button--default van-button--normal van-button--block van-button--round" id="bank">
-                        <div data-v-7aa0f84a="" class="van-button__content">
-                            <span data-v-7aa0f84a="" class="van-button__text">
-                                Add a bank card
+
+                <!-- Submit Button -->
+                <div
+                    data-v-7aa0f84a
+                    class="c-row c-row-center m-t-20 bank-btn"
+                >
+                    <button
+                        data-v-7aa0f84a
+                        class="btn van-button van-button--default van-button--normal van-button--block van-button--round"
+                        id="bank"
+                        type="button"
+                    >
+                        <div
+                            data-v-7aa0f84a
+                            class="van-button__content"
+                        >
+                            <span
+                                data-v-7aa0f84a
+                                class="van-button__text"
+                            >
+                                অ্যাকাউন্ট যোগ করুন
                             </span>
                         </div>
                     </button>
                 </div>
+
             </div>
-            <div data-v-7692a079="" data-v-7aa0f84a="" class="Loading c-row c-row-middle-center" style="display: none">
-                <div data-v-7692a079="" class="van-loading van-loading--circular">
-                    <span data-v-7692a079="" class="van-loading__spinner van-loading__spinner--circular"
-                        style="width: auto; height: auto; -webkit-animation-duration: 1s; animation-duration: 1s;">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            viewBox="0 0 200 200" width="200" height="200" preserveAspectRatio="xMidYMid meet"
-                            style="width: 100%;height: 100%;transform: translate3d(0px, 0px, 0px);content-visibility: visible;">
-                            <g transform="matrix(-0.5984085202217102,0.8011911511421204,-0.8011911511421204,-0.5984085202217102,239.9599609375,79.72173309326172)"
-                                style="display: block;">
-                                <image width="200px" height="200px" preserveAspectRatio="xMidYMid slice"
-                                    xlink:href="/index_files/loadingspinner.png"></image>
-                            </g>
-                            <g transform="matrix(0.9408400058746338,0,0,0.9408400058746338,20.969436645507812,79.30152130126953)"
-                                style="display: block;">
-                                <image width="168px" height="44px" preserveAspectRatio="xMidYMid slice"
-                                    xlink:href="/index_files/h5setting_202401100608011fs2.png"></image>
+
+            <!-- Loading -->
+            <div
+                data-v-7692a079
+                data-v-7aa0f84a
+                class="Loading c-row c-row-middle-center"
+                style="display:none"
+            >
+                <div
+                    data-v-7692a079
+                    class="van-loading van-loading--circular"
+                >
+                    <span
+                        data-v-7692a079
+                        class="van-loading__spinner van-loading__spinner--circular"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 200 200"
+                            width="200"
+                            height="200"
+                            preserveAspectRatio="xMidYMid meet"
+                            style="width:100%;height:100%"
+                        >
+                            <g>
+                                <image
+                                    width="200px"
+                                    height="200px"
+                                    xlink:href="/index_files/loadingspinner.png"
+                                ></image>
                             </g>
                         </svg>
                     </span>
                 </div>
             </div>
-            <!---->
+
         </div>
     </div>
+
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/js/client.js"></script>
+
     <script>
+        // Bangla alert message
         function alertMess(text, sic) {
-            $('body').append(
-                `
-                <div data-v-1dcba851="" class="msg">
-                    <div data-v-1dcba851="" class="msg-content v-enter-active v-enter-to" style=""> ${text} </div>
-                </div>
-                `
-            );
+            const msg = $('<div class="msg"></div>');
+            const content = $('<div class="msg-content v-enter-active v-enter-to"></div>');
+
+            content.text(text);
+            msg.append(content);
+            $('body').append(msg);
+
             setTimeout(() => {
-                $('.msg .msg-content').removeClass('v-enter-active v-enter-to');
-                $('.msg .msg-content').addClass('v-leave-active v-leave-to');
+                content.removeClass('v-enter-active v-enter-to');
+                content.addClass('v-leave-active v-leave-to');
+
                 setTimeout(() => {
-                    $('.msg').remove();
+                    msg.remove();
                 }, 100);
-                sic.removeClass('block-click');
-            }, 1000);
+
+                if (sic && typeof sic.removeClass === 'function') {
+                    sic.removeClass('block-click');
+                }
+            }, 1500);
         }
+
+        // Payment method selection
+        $('.payment-option').on('click', function () {
+            $('.payment-option').removeClass('active');
+
+            $(this).addClass('active');
+
+            $('#payment_method').val(
+                $(this).data('method')
+            );
+        });
+
+        $('.payment-option').on('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                $(this).trigger('click');
+            }
+        });
+
+        // Submit account details
         $('#bank').click(function (e) {
             e.preventDefault();
-            // let name_bank = $('#bank_name').val().trim();
-            let name_user = $('#your_name').val().trim();
-            let stk = $('#account_number').val().trim();
-            // let email = $('#ifsc_code').val().trim();
-            let tinh = $('#phone_number').val().trim();
-            if ( name_user && stk &&  tinh) {
-                $.ajax({
-                    type: "POST",
-                    url: "/api/webapi/addBank",
-                    data: {
-                        name_bank: "pkr",
-                        name_user: name_user,
-                        stk: stk,
-                        email: "0987654321",
-                        tinh: tinh,
-                    },
-                    dataType: "json",
-                    success: function (response) {
-                        console.log(response);
-                        alertMess(response.message, $(this));
-                        setTimeout(() => {
-                            if (response.message) {
-                                window.location.href = "/wallet/withdrawal";
-                            }
-                        }, 1200);
-                    }
-                });
-            } else {
-                alertMess('Please enter full information', $(this));
+
+            const button = $(this);
+
+            const name_user = $('#your_name').val().trim();
+            const stk = $('#account_number').val().trim();
+            const tinh = $('#phone_number').val().trim();
+
+            if (!name_user || !stk || !tinh) {
+                alertMess(
+                    'অনুগ্রহ করে সব তথ্য পূরণ করুন।',
+                    button
+                );
+                return;
             }
+
+            if (!/^[0-9]+$/.test(stk)) {
+                alertMess(
+                    'অনুগ্রহ করে সঠিক অ্যাকাউন্ট নম্বর লিখুন।',
+                    button
+                );
+                return;
+            }
+
+            if (!/^01[0-9]{9}$/.test(tinh)) {
+                alertMess(
+                    'অনুগ্রহ করে সঠিক ১১ সংখ্যার মোবাইল নম্বর লিখুন।',
+                    button
+                );
+                return;
+            }
+
+            button.prop('disabled', true);
+
+            $.ajax({
+                type: "POST",
+                url: "/api/webapi/addBank",
+
+                data: {
+                    name_bank: "BDT",
+                    name_user: name_user,
+                    stk: stk,
+                    email: "0987654321",
+                    tinh: tinh
+                },
+
+                dataType: "json",
+
+                success: function (response) {
+                    if (response && response.message) {
+                        alertMess(response.message, button);
+
+                        setTimeout(() => {
+                            window.location.href = "/wallet/withdrawal";
+                        }, 1200);
+                    } else {
+                        alertMess(
+                            'অনুরোধ সম্পন্ন করা যায়নি। আবার চেষ্টা করুন।',
+                            button
+                        );
+                    }
+                },
+
+                error: function () {
+                    alertMess(
+                        'সার্ভারে সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।',
+                        button
+                    );
+                },
+
+                complete: function () {
+                    button.prop('disabled', false);
+                }
+            });
         });
 
+        // Existing optional UPI handler
         $('#upi').click(function (e) {
             e.preventDefault();
-            let upi = $('#upi_address').val().trim();
-            let name = $('#holder_name').val().trim();
-            if (name && upi) {
-                $.ajax({
-                    type: "POST",
-                    url: "/api/webapi/addUpi",
-                    data: {
-                       upi,name
-                    },
-                    dataType: "json",
-                    success: function (response) {
-                        console.log(response);
-                        alertMess(response.message, $(this));
+
+            const button = $(this);
+
+            const upi = $('#upi_address').val().trim();
+            const name = $('#holder_name').val().trim();
+
+            if (!name || !upi) {
+                alertMess(
+                    'অনুগ্রহ করে সব তথ্য পূরণ করুন।',
+                    button
+                );
+                return;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/api/webapi/addUpi",
+
+                data: {
+                    upi: upi,
+                    name: name
+                },
+
+                dataType: "json",
+
+                success: function (response) {
+                    alertMess(
+                        response.message || 'অনুরোধ সম্পন্ন হয়েছে।',
+                        button
+                    );
+
+                    if (response.message) {
                         setTimeout(() => {
-                            if (response.message) {
-                                window.location.href = "/wallet/withdrawal";
-                            }
+                            window.location.href = "/wallet/withdrawal";
                         }, 1200);
                     }
-                });
-            } else {
-                alertMess('Please enter full information', $(this));
-            }
+                },
+
+                error: function () {
+                    alertMess(
+                        'সমস্যা হয়েছে। আবার চেষ্টা করুন।',
+                        button
+                    );
+                }
+            });
         });
-        $('.payment-option').click(function () {
-
-    $('.payment-option').removeClass('active');
-
-    $(this).addClass('active');
-
-    $('#payment_method').val($(this).data('method'));
-
-});
     </script>
-</body>
 
+</body>
 </html>
