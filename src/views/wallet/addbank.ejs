@@ -173,6 +173,28 @@
             opacity: .65;
             cursor: not-allowed;
         }
+
+        /* Fixed notification: never changes page layout */
+        #englishToast {
+            position: fixed !important;
+            top: 18px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            z-index: 2147483647 !important;
+            display: block !important;
+            width: max-content !important;
+            max-width: calc(100vw - 32px) !important;
+            height: auto !important;
+            padding: 13px 18px !important;
+            border-radius: 10px !important;
+            background: #242b39 !important;
+            color: #fff !important;
+            font: 500 14px/1.45 Arial, sans-serif !important;
+            text-align: center !important;
+            box-shadow: 0 8px 25px rgba(0,0,0,.25) !important;
+            box-sizing: border-box !important;
+            pointer-events: none !important;
+        }
     </style>
 </head>
 
@@ -383,27 +405,19 @@
     <script src="/js/client.js"></script>
 
     <script>
-        // Bangla alert message
-        function alertMess(text, sic) {
-            const msg = $('<div class="msg"></div>');
-            const content = $('<div class="msg-content v-enter-active v-enter-to"></div>');
-
-            content.text(text);
-            msg.append(content);
-            $('body').append(msg);
-
-            setTimeout(() => {
-                content.removeClass('v-enter-active v-enter-to');
-                content.addClass('v-leave-active v-leave-to');
-
-                setTimeout(() => {
-                    msg.remove();
-                }, 100);
-
-                if (sic && typeof sic.removeClass === 'function') {
-                    sic.removeClass('block-click');
-                }
-            }, 1500);
+        // English toast, outside document flow
+        let toastTimer;
+        function alertMess(message) {
+            let toast = document.getElementById('englishToast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'englishToast';
+                toast.setAttribute('role', 'alert');
+                document.body.appendChild(toast);
+            }
+            toast.textContent = message;
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toast.remove(), 3000);
         }
 
         // Payment method selection
@@ -436,27 +450,27 @@
 
             if (!name_user || !stk || !tinh) {
                 alertMess(
-                    'অনুগ্রহ করে সব তথ্য পূরণ করুন।',
+                    'Please fill in all required fields.',
                     button
                 );
                 return;
             }
 
-            if (!/^[0-9]+$/.test(stk)) {
-                alertMess(
-                    'অনুগ্রহ করে সঠিক অ্যাকাউন্ট নম্বর লিখুন।',
-                    button
-                );
-                return;
-            }
+            // if (!/^[0-9]+$/.test(stk)) {
+            //     alertMess(
+            //         'Please enter a valid account number.',
+            //         button
+            //     );
+            //     return;
+            // }
 
-            if (!/^01[0-9]{9}$/.test(tinh)) {
-                alertMess(
-                    'অনুগ্রহ করে সঠিক ১১ সংখ্যার মোবাইল নম্বর লিখুন।',
-                    button
-                );
-                return;
-            }
+            // if (!/^01[0-9]{9}$/.test(tinh)) {
+            //     alertMess(
+            //         'Please enter a valid 11-digit mobile number.',
+            //         button
+            //     );
+            //     return;
+            // }
 
             button.prop('disabled', true);
 
@@ -475,15 +489,16 @@
                 dataType: "json",
 
                 success: function (response) {
-                    if (response && response.message) {
-                        alertMess(response.message, button);
+                    const failed = !response || response.status === false || response.success === false || response.code === 0;
+                    if (!failed && response.message) {
+                        alertMess('Account added successfully.');
 
                         setTimeout(() => {
                             window.location.href = "/wallet/withdrawal";
                         }, 1200);
                     } else {
                         alertMess(
-                            'অনুরোধ সম্পন্ন করা যায়নি। আবার চেষ্টা করুন।',
+                            'Request failed. Please try again.',
                             button
                         );
                     }
@@ -491,7 +506,7 @@
 
                 error: function () {
                     alertMess(
-                        'সার্ভারে সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।',
+                        'Server error. Please try again.',
                         button
                     );
                 },
@@ -513,7 +528,7 @@
 
             if (!name || !upi) {
                 alertMess(
-                    'অনুগ্রহ করে সব তথ্য পূরণ করুন।',
+                    'Please fill in all required fields.',
                     button
                 );
                 return;
@@ -531,12 +546,10 @@
                 dataType: "json",
 
                 success: function (response) {
-                    alertMess(
-                        response.message || 'অনুরোধ সম্পন্ন হয়েছে।',
-                        button
-                    );
+                    const ok = response && response.message && response.status !== false && response.success !== false && response.code !== 0;
+                    alertMess(ok ? 'Request completed successfully.' : 'Request failed. Please try again.');
 
-                    if (response.message) {
+                    if (ok) {
                         setTimeout(() => {
                             window.location.href = "/wallet/withdrawal";
                         }, 1200);
@@ -545,7 +558,7 @@
 
                 error: function () {
                     alertMess(
-                        'সমস্যা হয়েছে। আবার চেষ্টা করুন।',
+                        'Something went wrong. Please try again.',
                         button
                     );
                 }

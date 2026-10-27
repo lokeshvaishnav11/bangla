@@ -604,13 +604,13 @@ transform:translate(12px,16px);
     <div class="popupBox">
 
         <h2>
-            🤖 AI Assistant
+            🤖 এআই সহকারী
         </h2>
 
         <div class="popupRow">
 
             <span>
-                Bet Time Start
+                বাজি শুরুর সময়
             </span>
 
             <input
@@ -622,7 +622,7 @@ transform:translate(12px,16px);
         <div class="popupRow">
 
             <span>
-                Crash Value:
+                ক্র্যাশ ভ্যালু:
             </span>
 
             <input
@@ -634,7 +634,7 @@ transform:translate(12px,16px);
         <div class="popupRow">
 
             <span>
-Click "Next" to get the next prediction!            </span>
+পরবর্তী পূর্বাভাস পেতে "পরবর্তী" বাটনে ক্লিক করুন!            </span>
 
      
 
@@ -643,7 +643,7 @@ Click "Next" to get the next prediction!            </span>
           <div class="popupRow">
 
             <span>
-اگلی پیش گوئی حاصل کرنے کے لیے "Next" پر کلک کریں۔          </span>
+পরবর্তী পূর্বাভাস পেতে "পরবর্তী" বাটনে ক্লিক করুন।          </span>
 
      
 
@@ -654,14 +654,14 @@ Click "Next" to get the next prediction!            </span>
             <button
             id="closeBot">
 
-                Close
+                বন্ধ করুন
 
             </button>
 
             <button
             id="nextBot">
 
-                Next →
+                পরবর্তী →
 
             </button>
 
@@ -889,7 +889,7 @@ closeBtn.onclick=()=>{
 //     try {
 
 //         nextBtn.disabled = true;
-//         nextBtn.innerHTML = "Loading...";
+//         nextBtn.innerHTML = "লোড হচ্ছে...";
 
 //         const res = await fetch("https://api.ai-pro-bot.com/nextcrash2", {
 //             method: "GET",
@@ -907,19 +907,19 @@ closeBtn.onclick=()=>{
 
 //         } else {
 
-//             alert("Bet time nahi mila.");
+//             alert("বাজির সময় পাওয়া যায়নি।");
 
 //         }
 
 //     } catch (err) {
 
 //         console.error(err);
-//         alert("Server Error");
+//         alert("সার্ভারে সমস্যা হয়েছে");
 
 //     } finally {
 
 //         nextBtn.disabled = false;
-//         nextBtn.innerHTML = "Next →";
+//         nextBtn.innerHTML = "পরবর্তী →";
 
 //     }
 
@@ -931,7 +931,7 @@ nextBtn.onclick = async () => {
     try {
 
         nextBtn.disabled = true;
-        nextBtn.innerHTML = "Loading...";
+        nextBtn.innerHTML = "লোড হচ্ছে...";
 
         const res = await fetch("https://api.ai-pro-bot.com/nextcrash2");
 
@@ -943,12 +943,12 @@ nextBtn.onclick = async () => {
     } catch (err) {
 
         console.error(err);
-        alert("Server Error");
+        alert("সার্ভারে সমস্যা হয়েছে");
 
     } finally {
 
         nextBtn.disabled = false;
-        nextBtn.innerHTML = "Next →";
+        nextBtn.innerHTML = "পরবর্তী →";
 
     }
 
