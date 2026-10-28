@@ -164,11 +164,11 @@ const addManualUPIPaymentRequest = async (req, res) => {
 
 
         const url = 'https://www.lg-pay.com/api/order/create';
-        const key = 'UjNje5bSYAlRALt7x32psLTRYU1w799'
+        const key = 'sYTX6WzxJTX8Kx6mrUPHhQ7FCOCxOHti'
         // 'VN8NHNnda0Rn72UqeIvTwhQuEV2yXVcn';
         // const key = 'O2UyHC65eofVs2xsGCjDzY2qVbybifea';
 
-        const app_id = 'BDT3248'
+        const app_id = 'MJL3340'
         // "YD4569"
         // 'YD4555';
         //
@@ -177,11 +177,11 @@ const addManualUPIPaymentRequest = async (req, res) => {
         console.log(addon1)
         const params = {
             app_id,
-            trade_type: 'BDTPH',      //INRUPI         // test channel for collection
+            trade_type: 'Bkash',      //INRUPI         // test channel for collection
             order_sn: orderId,  // unique order number
             money: moneyp * 100,                // order amount
-            notify_url: 'https://real-cash365.club/callback', // your callback URL
-            return_url: 'https://real-cash365.club/home', // user redirect URL
+            notify_url: 'https://real-cash365.vip/callback', // your callback URL
+            return_url: 'https://real-cash365.vip/home', // user redirect URL
             subject: 'Test Order',
             user_id: addon1,
             ip: req.ip        // order description
@@ -302,11 +302,11 @@ const addManualUPIPaymentRequest2 = async (req, res) => {
 
 
         const url = 'https://www.lg-pay.com/api/order/create';
-        const key = 'LfqJcpuHgw9sYMoCB0Ya5yhTiVfvkUAX'
+        const key = 'sYTX6WzxJTX8Kx6mrUPHhQ7FCOCxOHti'
         // 'VN8NHNnda0Rn72UqeIvTwhQuEV2yXVcn';
         // const key = 'O2UyHC65eofVs2xsGCjDzY2qVbybifea';
 
-        const app_id = 'BDT3313'
+        const app_id = 'MJL3340'
         // "YD4569"
         // 'YD4555';
         //
@@ -315,11 +315,11 @@ const addManualUPIPaymentRequest2 = async (req, res) => {
         console.log(addon1)
         const params = {
             app_id,
-            trade_type: 'BDTPH-EASY',      //INRUPI         // test channel for collection
+            trade_type: 'Nagad',      //INRUPI         // test channel for collection
             order_sn: orderId,  // unique order number
             money: moneyp * 100,                // order amount
-            notify_url: 'https://real-cash365.club/callback', // your callback URL
-            return_url: 'https://real-cash365.club/home', // user redirect URL
+            notify_url: 'https://real-cash365.vip/callback', // your callback URL
+            return_url: 'https://real-cash365.vip/home', // user redirect URL
             subject: 'Test Order',
             user_id: addon1,
             ip: req.ip        // order description
