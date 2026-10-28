@@ -180,8 +180,8 @@ const addManualUPIPaymentRequest = async (req, res) => {
             trade_type: 'Bkash',      //INRUPI         // test channel for collection
             order_sn: orderId,  // unique order number
             money: moneyp * 100,                // order amount
-            notify_url: 'https://real-cash365.vip/callback', // your callback URL
-            return_url: 'https://real-cash365.vip/home', // user redirect URL
+            notify_url: 'https://realcash365.vip/callback', // your callback URL
+            return_url: 'https://realcash365.vip/home', // user redirect URL
             subject: 'Test Order',
             user_id: addon1,
             ip: req.ip        // order description
@@ -318,8 +318,8 @@ const addManualUPIPaymentRequest2 = async (req, res) => {
             trade_type: 'Nagad',      //INRUPI         // test channel for collection
             order_sn: orderId,  // unique order number
             money: moneyp * 100,                // order amount
-            notify_url: 'https://real-cash365.vip/callback', // your callback URL
-            return_url: 'https://real-cash365.vip/home', // user redirect URL
+            notify_url: 'https://realcash365.vip/callback', // your callback URL
+            return_url: 'https://realcash365.vip/home', // user redirect URL
             subject: 'Test Order',
             user_id: addon1,
             ip: req.ip        // order description
